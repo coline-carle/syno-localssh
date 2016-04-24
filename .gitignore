@@ -2,3 +2,5 @@ build.sh
 run.sh
 sshkey
 sshkey.pub
+rsyncd.conf
+sshd_cnofig

@@ -25,12 +25,21 @@ ssh-keygen -t rsa -b 4096 -f ./sshkey
 
 ### SSHD Config
 
-Modify the example `sshd_config` file to set the `USERNAME` for the user allowed to ssh to the running container. Should be the same as the user account created within the image.
+Modify the example `sshd_config.example` file to set the `USERNAME` for the user allowed to ssh to the running container. Should be the same as the user account created within the image.
+
+```bash
+cp sshd_config.example sshd_config
+sed -i 's/USERNAME/myuser/g' sshd_config
+```
 
 
 ### RSYNCD Config
 
-Modify the example `rsyncd.conf` file to configure the paths that are being made accessible for write or read. The paths should be the same paths as specified within the docker run command below.
+Modify the example `rsyncd.conf.example` file to configure the paths that are being made accessible for write or read. The paths should be the same paths as specified within the docker run command below.
+
+```bash
+cp rsyncd.conf.example rsyncd.conf
+```
 
 
 ## Building the image
