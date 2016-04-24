@@ -36,9 +36,7 @@ Modify the example `rsyncd.conf` file to configure the paths that are being made
 ## Building the image
 
 ```bash
-USERNAME=myuser
-PASSWORD=mypassword
-sudo docker build -t myimagename .
+sudo docker build -t myimagename --build-arg USERNAME=myuser --build-arg PASSWORD=mypassword .
 ```
 
 
