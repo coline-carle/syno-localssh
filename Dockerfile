@@ -23,7 +23,7 @@ ARG PASSWORD
 # the user is added with no password but then a change password
 # is done so that login via ssh key later but login via password
 # is disabled in the provided sshd_config file.
-RUN adduser -D -s /bin/bash -G users ${USERNAME} && echo '${USERNAME}:${PASSWORD}' | chpasswd
+RUN adduser -D -s /bin/bash -G users ${USERNAME} && echo "${USERNAME}:${PASSWORD}" | chpasswd
 
 # Add the users ssh keys as that is the only way to log in
 COPY sshkey /home/${USERNAME}/.ssh/id_rsa
