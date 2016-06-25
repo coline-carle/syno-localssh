@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 
 # Required to install runit (our process manager)
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
